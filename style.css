@@ -32,7 +32,13 @@ body {
     outline: 1px solid hotpink;
 }
 */
+.product h3 {
+    margin: 12px 0 6px;
+}
 
+.product p {
+    font-weight: 600%;
+}
 .logo {
     color: black;
     font-weight: 700;
@@ -51,8 +57,8 @@ body {
 
 .site-header {
     position: fixed;      /* stays on screen */
-    top: 24px;
-    left: 24px;
+    top: 16px;
+    left: 16px;
     padding: 0;
     background: transparent;
 
@@ -81,7 +87,9 @@ body {
 /*body { 
     background: pink;   
 }*/
-
+.product:hover {
+    transform: translateY(-6px); transition: .25s;
+}
 
 .products-section {
     background:rgba(255,255,255, 0.6);
@@ -92,15 +100,33 @@ body {
 
 
 .hero button {
-    font-weight: 700; 
-    padding: 10px 20px;
+    background: linear-gradient(135deg, #ff3b3b, #d90429);
+    color: white;
+    border: none;
+    padding: 12px 26px;
+    border-radius: 999px;
 
+    font-weight: 600;
+    box-shadow:
+        0 6px 18px rgba(217,4,41,0.4),
+        inset 0 1px 0 rgba(255,255,255,0.35);
+
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease;
 }
+
+.hero button:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 10px 26px rgba(217,4,41,0.55),
+        inset 0 1px 0 rgba(255,255,255,0.4);
+}
+
 
 .top-actions {
     position: fixed;
-    top: 24px;
-    right: 24px;
+    top: 16px;
+    right: 16px;
     display: flex;
     gap: 12px;
     z-index: 1000;
@@ -109,4 +135,54 @@ body {
 .icon-btn:hover {
     transform: translateY(-2px);
     transition: 0.2s ease;
+}
+.icon-btn {
+    font-size: 14px;
+    padding: 6px 10px
+}
+
+.site-footer {
+    margin-top: 60px;
+    padding: 15px 16px;
+    text-align: center;
+    font-size: 10px;
+    color:black;
+    border-top: 1px solid #e0e0e0;
+    background: #f9fafb;
+}
+
+.partners {
+    text-align: center;
+    margin: 60px 0 20px;
+
+}
+
+.partners-title {
+    font-size: 14px;
+    color: black;
+    margin-bottom: 16px;
+
+}
+
+.partners-logos {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    align-items: center;
+
+}
+
+.partners-logos img:hover {
+    opacity:1;
+    transform: translateY(-2px)
+}
+.partners-logos img {
+    height: 28px;
+    opacity: 0.7;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.hero {
+    margin: 60px auto 40px;
+    margin-top: 100px;
 }
