@@ -11,8 +11,6 @@ body {
 
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
 
-
-
 }
 
 
@@ -137,14 +135,22 @@ body.dark .logo {
     z-index: 1000;
 }
 
-.icon-btn:hover {
-    transform: translateY(-2px);
-    transition: 0.2s ease;
-}
 .icon-btn {
-    font-size: 14px;
-    padding: 6px 10px
+  background: rgba(255,255,255,0.8);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 14px;
+  padding: 8px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.04);
 }
+
+.icon-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(0,0,0,0.06);
+}
+
 
 .site-footer {
     margin-top: 60px;
