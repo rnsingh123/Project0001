@@ -1,144 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROJECT0001</title>
-
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vision Shopping – Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
 
-<header class="site-header">
-    <a href="dashboard.html" class="logo-link">
-    <h1 class="logo">Vision Shopping</h1>
+<!-- Navbar -->
+<nav class="navbar navbar-vs sticky-top">
+  <div class="container-fluid px-3">
+    <a class="navbar-brand me-3" href="index.html">
+      <span><i class="bi bi-eye-fill me-1"></i>Vision <em>Shopping</em></span>
     </a>
-</header>
+    <form class="d-flex flex-grow-1 search-bar me-3" id="navbar-search-form">
+      <input class="form-control" type="search" id="navbar-search-input" placeholder="Search products…" aria-label="Search" />
+      <button class="btn btn-search" type="submit"><i class="bi bi-search"></i></button>
+    </form>
+    <div class="d-flex align-items-center gap-2">
+      <a href="#" class="btn btn-nav d-none d-md-inline"><i class="bi bi-person"></i> Login</a>
+      <a href="#" class="btn btn-nav d-none d-md-inline"><i class="bi bi-person-plus"></i> Register</a>
+      <a href="cart.html" class="btn btn-nav position-relative">
+        <i class="bi bi-cart3 fs-5"></i>
+        <span class="position-absolute badge rounded-pill bg-warning text-dark cart-badge" style="display:none">0</span>
+      </a>
+    </div>
+  </div>
+</nav>
 
-<div class="top-actions">
-    <button class="icon-btn" aria-label="Notifications">Notifications🔔</button>
-    <button class="icon-btn" aria-label="Cart">Carts🛒</button>
-    <button
-  class="icon-btn"
-  id="settingsBtn"
-  onclick="toggleSettings()">
-  Settings⚙️
-</button>
-
+<!-- Sub-navbar -->
+<div class="sub-navbar d-none d-md-block">
+  <div class="container-fluid px-3 d-flex gap-1">
+    <a href="products.html?q=">All Products</a>
+    <a href="products.html?cat=electronics">Electronics</a>
+    <a href="products.html?cat=fashion">Fashion</a>
+    <a href="products.html?cat=home">Home</a>
+    <a href="products.html?cat=sports">Sports</a>
+  </div>
 </div>
 
-<div class="hero">
-    <p class="tagline">Shop Anything Anytime</p>
-    <p>We deliver the best products right to your doorstep.</p>
-    <button>Shop NOW!</button>
-</div>
-
-<section class="category-series">
-  <h2>Main Category Series</h2>
-
-  <div class="category-grid">
-    <a href="#" class="category-card">
-      <img src="assets/shoescollection.jpg" alt="Shoes">
-      <p>Shoes</p>
-    </a>
-
-    <a href="#" class="category-card">
-      <img src="assets/watchescollection.jpg" alt="Watches">
-      <p>Watches</p>
-    </a>
-
-    <a href="#" class="category-card">
-      <img src="assets/hood.jpg" alt="Hoodies">
-      <p>Hoodies</p>
-    </a>
-
-    <a href="#" class="category-card">
-      <img src="assets/electronics.jpg" alt="Electronics">
-      <p>Electronics</p>
-    </a>
+<!-- Hero -->
+<section class="hero-section">
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h1>Shop Smarter,<br /><span>Live Better.</span></h1>
+        <p class="mt-3 mb-4">Discover thousands of products across electronics, fashion, home & more — all in one place.</p>
+        <a href="products.html" class="btn btn-hero me-2"><i class="bi bi-bag-fill me-1"></i>Shop Now</a>
+        <a href="#categories" class="btn btn-outline-light">Browse Categories</a>
+      </div>
+      <div class="col-lg-6 text-center d-none d-lg-block">
+        <img src="https://placehold.co/480x300?text=Vision+Shopping" class="img-fluid rounded-3 shadow-lg" alt="Hero" />
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="features">
-    <div class="feature">
-        <h2>Wide Selection</h2>
-        <p>Choose from thousands of products across various categories.</p>
-    </div> 
-
-</section>
-
-
-
-<section class="products-section">
-    <h2>Featured Products</h2>
-
-    <div class="products">
-
-        <div class="product">
-            <img src="assets/guitars.jpg" alt="Fender OG">
-            <h3>Fender OG</h3>
-            <p>$29.99</p>
-            <button>Add to Cart</button>
-        </div>
-
-        <div class="product">
-            <img src="assets/jackets.jpg" alt="ZARA Jacket">
-            <h3>ZARA MAN</h3>
-            <p>$49.99</p>
-            <button>Add to Cart</button>
-        </div>
-
-        <div class="product">
-            <img src="assets/watches.jpg" alt="Casio Edifice">
-            <h3>CASIO <em>Edifice</em></h3>
-            <p>$19.99</p>
-            <button>Add to Cart</button>
-        </div>
-
-        <div class="product">
-            <img src="assets/shoes.jpg" alt="NIKE AIR JORDAN">
-            <h3>NIKE AIR JORDAN<br><em>(ICE BLUE)</em></h3>
-            <p>$39.99</p>
-            <button>Add to Cart</button>
-        </div>
-
+<!-- Categories -->
+<section id="categories" class="py-5 bg-white">
+  <div class="container">
+    <h2 class="section-title mb-4">Shop by Category</h2>
+    <div class="row g-3">
+      <div class="col-6 col-md-3">
+        <a href="products.html?cat=electronics" class="category-card">
+          <span class="cat-icon">📱</span>
+          <h6>Electronics</h6>
+          <small class="text-muted">3 products</small>
+        </a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="products.html?cat=fashion" class="category-card">
+          <span class="cat-icon">👗</span>
+          <h6>Fashion</h6>
+          <small class="text-muted">3 products</small>
+        </a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="products.html?cat=home" class="category-card">
+          <span class="cat-icon">🏠</span>
+          <h6>Home & Kitchen</h6>
+          <small class="text-muted">3 products</small>
+        </a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="products.html?cat=sports" class="category-card">
+          <span class="cat-icon">⚽</span>
+          <h6>Sports</h6>
+          <small class="text-muted">3 products</small>
+        </a>
+      </div>
     </div>
+  </div>
 </section>
 
-
-<section class="partners">
-    <p class="partners-title">Our Partner Companies:</p>
-    <div class="partners-logos">
-        <img src="assets/nike.jpg" alt="Nike">
-        <img src="assets/adidas.jpg" alt="Adidas">
-        <img src="assets/puma.jpg" alt="Puma">
-        <img src="assets/reebok.jpg" alt="Reebok">
-        
+<!-- Featured Products -->
+<section class="py-5">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="section-title mb-0">Featured Products</h2>
+      <a href="products.html" class="btn btn-outline-dark btn-sm">View All <i class="bi bi-arrow-right"></i></a>
     </div>
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3" id="featured-products"></div>
+  </div>
 </section>
 
-<footer class="site-footer">
-    <p>&copy;2026 <em>Vision_Engine Ltd.</em></p>
-    <p>Build With ❤️ By Vision_Engine
-    </p>
+<!-- Promo Banner -->
+<section class="py-4" style="background: linear-gradient(90deg,#febd69,#f3a847);">
+  <div class="container text-center">
+    <h4 class="fw-bold mb-1">Free Shipping on Orders Over $50</h4>
+    <p class="mb-2">Use code <strong>VISION50</strong> at checkout</p>
+    <a href="products.html" class="btn btn-dark btn-sm px-4">Shop Now</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-main mt-0">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <h6><i class="bi bi-eye-fill me-1 text-warning"></i>Vision Shopping</h6>
+        <p style="font-size:0.88rem;color:#aaa;">Your one-stop destination for quality products at great prices. Shop with confidence.</p>
+        <div class="mt-2">
+          <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <h6>Shop</h6>
+        <a href="products.html?cat=electronics">Electronics</a>
+        <a href="products.html?cat=fashion">Fashion</a>
+        <a href="products.html?cat=home">Home</a>
+        <a href="products.html?cat=sports">Sports</a>
+      </div>
+      <div class="col-6 col-md-2">
+        <h6>Account</h6>
+        <a href="#">Login</a>
+        <a href="#">Register</a>
+        <a href="cart.html">My Cart</a>
+        <a href="#">Orders</a>
+      </div>
+      <div class="col-md-4">
+        <h6>Contact Us</h6>
+        <p style="font-size:0.88rem;color:#aaa;"><i class="bi bi-envelope me-1"></i> support@visionshopping.com</p>
+        <p style="font-size:0.88rem;color:#aaa;"><i class="bi bi-telephone me-1"></i> +1 (800) 555-0199</p>
+        <p style="font-size:0.88rem;color:#aaa;"><i class="bi bi-geo-alt me-1"></i> 123 Commerce St, NY 10001</p>
+      </div>
+    </div>
+  </div>
 </footer>
-
-<!-- SETTINGS IFRAME PANEL -->
-<div class="settings-frame-wrapper">
-
-    <iframe 
-        src="settings.html" 
-        class="settings-frame"
-        title="Settings Panel">
-    </iframe>
-
+<div class="footer-bottom">
+  &copy; 2026 Vision Shopping. All rights reserved.
 </div>
 
-<script src="script.js"></script>
+<!-- Toast Container -->
+<div id="toast-container"></div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
