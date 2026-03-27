@@ -1,0 +1,169 @@
+/* ══════════════════════════════════════════
+   Vision Shopping — Light Blue Global Theme
+   Load AFTER style.css to override defaults
+   ══════════════════════════════════════════ */
+
+:root {
+  --vs-primary:      #1565c0;   /* deep blue  — navbar, footer-bottom */
+  --vs-secondary:    #1e88e5;   /* mid blue   — sub-navbar, footer    */
+  --vs-accent:       #81d4fa;   /* light blue — buttons, badges       */
+  --vs-accent-dark:  #4fc3f7;   /* hover state for accent             */
+  --vs-red:          #0277bd;   /* replaces red with a darker blue    */
+
+  --vs-bg:           #e3f2fd;   /* page background                    */
+  --vs-surface:      #ffffff;   /* cards, panels                      */
+  --vs-text:         #0d1b2a;   /* primary text                       */
+  --vs-text-muted:   #546e7a;   /* muted / secondary text             */
+  --vs-border:       #b3d9f7;   /* card / input borders               */
+}
+
+/* ── Page background & text ── */
+body {
+  background: var(--vs-bg);
+  color: var(--vs-text);
+}
+
+/* ── Navbar ── */
+.navbar-vs {
+  background: var(--vs-primary);
+}
+
+.navbar-brand span {
+  color: var(--vs-accent);
+}
+
+.search-bar .btn-search {
+  background: var(--vs-accent);
+  color: var(--vs-text);
+}
+
+.search-bar .btn-search:hover {
+  background: var(--vs-accent-dark);
+}
+
+.navbar-vs .btn-nav:hover,
+.navbar-vs .nav-link:hover {
+  color: var(--vs-accent) !important;
+}
+
+/* ── Sub-navbar ── */
+.sub-navbar {
+  background: var(--vs-secondary);
+}
+
+/* ── Hero ── */
+.hero-section {
+  background: linear-gradient(135deg, #1565c0 0%, #1e88e5 55%, #81d4fa 100%);
+}
+
+.hero-section::after {
+  background: rgba(129, 212, 250, 0.18);
+}
+
+.hero-section h1 span {
+  color: var(--vs-accent);
+}
+
+.btn-hero {
+  background: var(--vs-accent);
+  color: var(--vs-text);
+}
+
+.btn-hero:hover {
+  background: var(--vs-accent-dark);
+}
+
+/* ── Category cards ── */
+.category-card {
+  background: var(--vs-surface);
+  border-color: var(--vs-border);
+  color: var(--vs-text);
+}
+
+.category-card:hover {
+  box-shadow: 0 8px 24px rgba(21, 101, 192, 0.15);
+  color: var(--vs-text);
+}
+
+/* ── Product cards ── */
+.product-card {
+  background: var(--vs-surface);
+  border-color: var(--vs-border);
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 24px rgba(21, 101, 192, 0.15);
+}
+
+.add-to-cart-btn {
+  background: var(--vs-accent);
+  color: var(--vs-text);
+}
+
+.add-to-cart-btn:hover {
+  background: var(--vs-accent-dark);
+}
+
+/* ── Section title accent bar ── */
+.section-title {
+  border-left-color: var(--vs-accent);
+  color: var(--vs-text);
+}
+
+/* ── Filter buttons ── */
+.filter-btn {
+  background: var(--vs-surface);
+  border-color: var(--vs-border);
+  color: var(--vs-text);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--vs-primary);
+  border-color: var(--vs-primary);
+  color: #fff;
+}
+
+/* ── Cart summary ── */
+.cart-summary-card {
+  background: var(--vs-surface);
+  border-color: var(--vs-border);
+}
+
+.btn-checkout {
+  background: var(--vs-accent);
+  color: var(--vs-text);
+}
+
+.btn-checkout:hover {
+  background: var(--vs-accent-dark);
+}
+
+/* ── Promo banner ── */
+.promo-banner {
+  background: linear-gradient(90deg, var(--vs-accent), var(--vs-accent-dark)) !important;
+}
+
+/* ── Footer ── */
+.footer-main {
+  background: var(--vs-secondary);
+}
+
+.footer-main a:hover,
+.social-icon:hover {
+  color: var(--vs-accent);
+}
+
+.footer-bottom {
+  background: var(--vs-primary);
+}
+
+/* ── Page hero (products / cart pages) ── */
+.page-hero {
+  background: linear-gradient(90deg, var(--vs-primary), var(--vs-secondary));
+}
+
+/* ── Toast ── */
+.toast.text-bg-success {
+  background-color: var(--vs-primary) !important;
+}
